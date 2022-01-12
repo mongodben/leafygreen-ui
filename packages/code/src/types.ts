@@ -51,7 +51,7 @@ export interface SyntaxProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Specifies the number by which to start line numbering.
    *
-   * default: 1
+   * default: `1`
    */
   lineNumberStart: number;
 

@@ -11,6 +11,7 @@ import Icon from '@leafygreen-ui/icon';
 
 const codeSnippet = 'const greeting = "Hello, world!";';
 const className = 'test-class';
+const lineNumberStart = 1;
 const onCopy = jest.fn();
 
 const actionData = [
@@ -32,7 +33,7 @@ describe('packages/Code', () => {
       spy.mockReturnValue(true);
 
       return render(
-        <Code className={className} language="javascript">
+        <Code className={className} language="javascript" lineNumberStart={lineNumberStart}>
           {codeSnippet}
         </Code>,
       );
@@ -50,7 +51,7 @@ describe('packages/Code', () => {
         spy.mockReturnValue(true);
 
         render(
-          <Code copyable={true} language="javascript">
+          <Code copyable={true} language="javascript" lineNumberStart={lineNumberStart}>
             {codeSnippet}
           </Code>,
         );
@@ -88,7 +89,7 @@ describe('packages/Code', () => {
         spy.mockReturnValue(true);
 
         render(
-          <Code onCopy={onCopy} copyable={true} language="javascript">
+          <Code onCopy={onCopy} copyable={true} language="javascript" lineNumberStart={lineNumberStart}>
             {codeSnippet}
           </Code>,
         );
@@ -135,6 +136,7 @@ describe('packages/Code', () => {
           language="javascript"
           showCustomActionButtons
           customActionButtons={actionData}
+          lineNumberStart={lineNumberStart}
         >
           {codeSnippet}
         </Code>,
@@ -148,6 +150,7 @@ describe('packages/Code', () => {
           language="javascript"
           showCustomActionButtons
           customActionButtons={[]}
+          lineNumberStart={lineNumberStart}
         >
           {codeSnippet}
         </Code>,
