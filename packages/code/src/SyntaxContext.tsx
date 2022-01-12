@@ -11,7 +11,7 @@ interface SyntaxContext {
 export const SyntaxContext = createContext<SyntaxContext>({
   highlightLines: [],
   darkMode: false,
-  lineNumberStart: 1
+  lineNumberStart: 1,
 });
 
 export function useSyntaxContext() {

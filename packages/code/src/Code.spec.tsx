@@ -33,7 +33,11 @@ describe('packages/Code', () => {
       spy.mockReturnValue(true);
 
       return render(
-        <Code className={className} language="javascript" lineNumberStart={lineNumberStart}>
+        <Code
+          className={className}
+          language="javascript"
+          lineNumberStart={lineNumberStart}
+        >
           {codeSnippet}
         </Code>,
       );
@@ -51,7 +55,11 @@ describe('packages/Code', () => {
         spy.mockReturnValue(true);
 
         render(
-          <Code copyable={true} language="javascript" lineNumberStart={lineNumberStart}>
+          <Code
+            copyable={true}
+            language="javascript"
+            lineNumberStart={lineNumberStart}
+          >
             {codeSnippet}
           </Code>,
         );
@@ -89,7 +97,12 @@ describe('packages/Code', () => {
         spy.mockReturnValue(true);
 
         render(
-          <Code onCopy={onCopy} copyable={true} language="javascript" lineNumberStart={lineNumberStart}>
+          <Code
+            onCopy={onCopy}
+            copyable={true}
+            language="javascript"
+            lineNumberStart={lineNumberStart}
+          >
             {codeSnippet}
           </Code>,
         );
